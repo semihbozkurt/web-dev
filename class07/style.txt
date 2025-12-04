@@ -1,0 +1,11 @@
+<style>
+	    #div{
+	        width: 300px;
+	    }
+            #id1{
+                background-color: green; color: white;
+            }
+            #id2{
+                background-color: orange; color: red;
+            }
+        </style>
