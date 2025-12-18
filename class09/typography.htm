@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>typograf</title>
+        <link href="https://static.wikia.nocookie.net/metro-goldwyn-mayer-cartoons/images/8/85/Tom_be2af94.webp/revision/latest?cb=20240809235151">
+        <style>.cl1{
+            text-align: center;
+            width: 150 px;
+            height: 250 px;
+            color: black;
+            font-family: cursive;
+            background-color: pink;
+            /*solid/double/dashed/dotted*/
+            border: 3px double black;
+            border-radius: 20px;
+            margin: 20px auto;
+            transition: all 2s ease;
+            text-shadow: 10px 10px 3px black;
+            text-decoration: overline underline line-through;
+        }
+        .cl1:hover{animation: ex1 5s;}
+        .cl1 a{text-decoration: none;}
+        @keyframes ex1{
+            0% {transform: rotate(-30deg);box-shadow: 10px 10px 10px 0px red;}
+            25%{transform: rotate(-15deg);box-shadow: 5px 5px 5px 0px red;}
+            50%{transform: rotate(0deg);box-shadow: 1px 5px 0px red;}
+            75%{transform: rotate(15deg);box-shadow: 5px 5px 5px 0px red;}
+            100%{transform: rotate(30deg);box-shadow: 10px 10px 10px 0px red;}
+
+        }
+        </style>
+    </head>
+    <body>
+        <div class="cl1">
+            <h1>Semih</h1>
+            <img src="https://static.wikia.nocookie.net/metro-goldwyn-mayer-cartoons/images/8/85/Tom_be2af94.webp/revision/latest?cb=20240809235151">
+            <p>this paragraph is a paragraph</p>
+            <button><a href="#">click here</a></button>
+        </div>
+    </body>
+</html>
