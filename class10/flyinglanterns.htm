@@ -6,47 +6,47 @@
     <style>
          .card {
             text-align: center;
-            width: 600px;
-            height: 600px;
+            width: 100vw;
+            height: 100vh;
             background-image: url("https://images.unsplash.com/photo-1488866022504-f2584929ca5f?fit=fillmax&fm=jpg&ixid=MnwzNTY3MHwwfDF8YWxsfHx8fHx8fHx8MTY3OTgzOTkwMA&ixlib=rb-4.0.3&q=75");
+            background-size: cover;
+            background-position: center;
             margin: 60px auto;
             transition: all 2s ease;
             padding: 200px;
-
+            position: relative;
+            overflow: hidden;
 
     }
      
            
+    .lan{
+            height: 100px;
+            width: 100px;
+            position:absolute;
+            animation: floating linear 17s infinite;
+            filter: drop-shadow(0px 0px 10px yellow);
         
-        .img1 {
-            position: absolute;
-            top: 700px;  
-            left: 500px;
         }
-        .img2 {
-            position: absolute;
-            top: 800px;  
-            left: 50px;
+
+
+
+    @keyframes floating{
+        from{
+            bottom: 0%;
+    }
+        to{
+            bottom: 100%;
+            opacity: 0.1;
         }
-        .img3 {
-            position: absolute;
-            top: 300px;  
-            left: 800px;
-        }
-        .card :hover{
-            transform: translateY(-200px);
-            transition: all 2s ease;
-        }
+    }
     </style>
    
 
 </head>
 <body>
     <div class="card">
-        <img src="../lantern.png" class="img1">
-        <img src="../lantern.png">
-        <img src="../lantern.png" class="img2">
-        <img src="../lantern.png" class="img3">
+        <img src="../lantern.png" class="lan">
 
     </div>
 <html>
