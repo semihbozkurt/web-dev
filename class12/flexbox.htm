@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>flex box</title>
+        <style>
+            body{
+                margin: 0;
+            }
+            .parent{
+                height: 50vh;
+                background-color: black;
+                padding: 15px;
+                color: white;
+                display: flex;
+                /*space around- space evenly- start- end- center- space between */
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                
+            }
+            .parent a{
+                text-decoration: none;
+                color: white;
+            }
+            .links{
+                display: flex;
+                width: 40%;
+                justify-content: space-around;
+            }
+            .parent2{
+                background-color: orangered;
+                height: 50vh auto;
+                color: white;
+
+            }
+            .child{
+                background-color: blueviolet;
+                height: 80px;
+                width: 80px;
+                margin: 5px;
+            }
+            #c4{
+                position: relative;
+                left: 100px;
+                top: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div>
+                <img src="https://zerodha.com/static/images/logo.svg" height="40px" width="100px">
+
+            </div>
+            <div class="links">
+                <div><a href="https://support.zerodha.com/" target="_blank">support</a></div>
+                <div><a href="https://zerodha.com/open-account/" target="_blank">signup</a></div>
+                <div><a href="https://zerodha.com/about/" target="_blank">about</a></div>
+            </div>
+
+        </div>
+
+        <div class="parent2">
+            <div class="child" id="c1">child</div>
+            <div class="child" id="c2">child</div>
+            <div class="child" id="c3">child</div>
+            <div class="child" id="c4">child</div>
+            <div class="child" id="c5">child</div>
+        </div>
+
+    </body>
+</html>
