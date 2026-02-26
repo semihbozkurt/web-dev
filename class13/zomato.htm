@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>zomato</title>
+        
+        <style>
+
+            body{
+                margin: 0px;
+            }
+
+            .parent{
+                position: relative;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            video{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+            .content{
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 0;
+            }
+            .icn img:hover{
+                transform: scale(1.1);
+            }
+
+
+        </style>
+
+    </head>
+
+
+    <body>
+
+        <div class="parent">
+
+<!-- child 1 -->
+
+            <video loop autoplay muted>
+
+                <source src="https://b.zmtcdn.com/data/file_assets/2627bbed9d6c068e50d2aadcca11ddbb1743095925.mp4">
+
+            </video>
+
+<!-- text content -->
+
+            <div class="content">
+
+                <img src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" height="70" width="200">
+
+                <div class="icn" style="margin: 20px;">
+
+                    <img style="margin: 10px;" src="https://b.zmtcdn.com/data/o2_assets/aad864bd17860b27634fe621001c32db1739350431.png" height="50px" width="200px">
+
+                    <img style="margin: 10px;" src="https://b.zmtcdn.com/data/o2_assets/df6464de32f4a09262cee301f65aaa661739351256.png" height="50px" width="200px">
+
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+
+</html>
