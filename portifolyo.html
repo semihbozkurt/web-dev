@@ -3,6 +3,7 @@
     <head>
         <title> My Portifolyo</title>
         <style>
+            * { box-sizing: border-box; }
             .div1{
                 width: 100%;
                 min-height: 100vh;
@@ -24,9 +25,31 @@
                 align-items: center;
                 
             }
+
+            .project{
+                height: 35vh;
+                width: 30%;
+                border: 1px solid black;
+                background-color: rgb(243, 238, 238);
+                padding: 10px;
+                border-radius: 8px;
+                margin: 3px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+                
+            }
+            .projectholder{
+                height: 50vh ;
+                justify-content: space-between;
+                
+            }
+
             .bg1 { background-image: url('image%20the%20image.jpg'); }
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
         
 
     </head>
@@ -37,12 +60,43 @@
             <p>Programer: Python~HTML~CSS~JavaScript </p>
             <div style="justify-content: center;"><a class="btn btn-warning ">view my projects</a> <a class="btn btn-light">Join my community</a></div>
         </div>
+        <hr>
         <div class="port">
             <div style="flex: 1; width: 100%; height: 50vh; background-position: center; background-size: cover; " class="bg1"></div>
             <div style="flex: 2; padding: 15px;">
                 <h3>About me</h3>
                 <p>Hi I am Semih. I am learning web devolopment</p>
             </div>
+        </div>
+<hr>
+        <div class="projectholder">
+            <div style="justify-items: center; margin: 50px;"><h2 style="margin: 5px; ">My projects</h2></div>   
+            <div style="display: flex; margin: 5px; justify-content: space-around;">
+                <div class="project ">
+                    <h6>Notepad</h6>
+                    <div style="padding: 3px; height: 120px;"> <img src="notepadimage.png" style="height:100%; width: 100%; border-radius: 8px;"></div>
+                    <p>A basic notpad app</p>
+                    <div><a class="btn btn-dark " style="width: 100%;" href="https://github.com/semihbozkurt/codingal/blob/main/class40/notepad.py" target="_blank">Github</a></div>
+                </div>
+
+                <div class="project ">
+                    <h6>Notepad</h6>
+                    <div style="padding: 3px; height: 120px;"> <img src="notepadimage.png" style="height:100%; width: 100%; border-radius: 8px;"></div>
+                    <p>A basic notpad app</p>
+                    <div><a class="btn btn-dark " style="width: 100%;" href="https://github.com/semihbozkurt/codingal/blob/main/class40/notepad.py" target="_blank">Github</a></div>
+                </div>
+
+                <div class="project ">
+                    <h6>Notepad</h6>
+                    <div style="padding: 3px; height: 120px;"> <img src="notepadimage.png" style="height:100%; width: 100%; border-radius: 8px;"></div>
+                    <p>A basic notpad app</p>
+                    <div><a class="btn btn-dark " style="width: 100%;" href="https://github.com/semihbozkurt/codingal/blob/main/class40/notepad.py" target="_blank">Github</a></div>
+                </div>
+            
+
+             
+            </div>
+            
         </div>
 
     </body>
