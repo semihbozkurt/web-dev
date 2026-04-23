@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>js</title>
+    </head>
+    <body>
+        <div>
+            <button onclick="change()">change background color</button>
+            <button onclick="calc()">Calculate</button>
+            <br>
+             add <p id="s1"></p>
+             substract <p id="s2"></p>
+             multiply <p id="s3"></p>
+             divide <p id="s4"></p>
+        </div>
+
+
+        <script>
+            function change(){
+                color= prompt("color:");
+                document.body.style.backgroundColor=color;
+            }
+            
+            function calc(){
+                var num1= Number(prompt("1. number"));
+                var num2 = Number(prompt("2. number"));
+                document.getElementById("s1").innerHTML= num1+num2;
+                document.getElementById("s2").innerHTML= num1-num2;
+                document.getElementById("s3").innerHTML= num1*num2;
+                document.getElementById("s4").innerHTML= num1/num2;
+            }
+        </script>
+    </body>
+</html>
