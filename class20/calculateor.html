@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <style>
+            .butto{margin: 5px; width: 50px;}
+            #in{width: 70%; height: 70px; font-size: 30; font-family: cursive; border-radius: 20px; margin: 5px; justify-items: end;}
+            #panel{width: 70%; height: auto; margin: 5px; padding: 5px;  background-color: black; border-radius: 20px;}
+        </style>
+    </head>
+    <body style="align-items: center; justify-items: center;">
+        <div id="panel"  class="text-center">
+            <input type="text" id="in">
+            <div style="padding: 5px;">
+                <button class="butto btn btn-primary" onclick="takeinput('+')">+</button>
+                <button class="butto btn btn-primary" onclick="takeinput('-')">-</button>
+                <button class="butto btn btn-primary" onclick="takeinput('*')">x</button>
+                <button class="butto btn btn-primary" onclick="takeinput('/')">/</button>
+                <br>
+                <button class="butto btn btn-danger"  onclick="takeinput('1')">1</button>
+                <button class="butto btn btn-danger"  onclick="takeinput('2')">2</button>
+                <button class="butto btn btn-danger"  onclick="takeinput('3')">3</button>
+                <button class="butto btn btn-danger"  onclick="takeinput('4')">4</button>
+                <br>
+                <button class="butto btn btn-danger"  onclick="takeinput('5')">5</button>
+                <button class="butto btn btn-danger"  onclick="takeinput('6')">6</button>
+                <button class="butto btn btn-danger"  onclick="takeinput('7')">7</button>
+                <button class="butto btn btn-danger"  onclick="takeinput('8')">8</button>
+                <br>
+                <button class="butto btn btn-danger"  onclick="takeinput('9')">9</button>
+                <button class="butto btn btn-danger"  onclick="takeinput('0')">0</button>
+                <button class="butto btn btn-danger"  onclick="takeinput('.')">.</button>
+                <button class="butto btn btn-success" onclick="calc()" >=</button>
+                <br>
+                <button class="btn btn-warning" style="width: 62.5%;" onclick="clearit()">Clear</button>
+            </div>
+        </div>
+
+        <script>
+            function takeinput(value){
+                document.getElementById('in').value+=value
+            }
+            function calc(){
+                const ans = document.getElementById('in').value
+                const result = eval(ans);
+                document.getElementById('in').value=result;
+            }
+            function clearit(){
+                document.getElementById('in').value=""
+            }
+            
+        </script>
+    </body>
+</html>
