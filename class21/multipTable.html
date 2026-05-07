@@ -1,0 +1,24 @@
+<html>
+    <head>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <title>Multiplication table</title>
+    </head>
+    <body>
+        <div class="container bg-dark text-center text-white ">
+            <input type="number" placeholder="Enter a number" id="inn">
+            <button class="btn btn-success " onclick="table()">Click to see</button>
+            <p id="paragraf"></p>
+        </div>
+        <script>
+            function table(){
+                var input = document.getElementById('inn').value
+                const param = document.getElementById('paragraf')
+                param.innerHTML=''
+                for (let i = 1; i<10;i++){
+                        param.innerHTML+=`${i} x ${input} = ${i*input} <br>`
+                    
+                }
+            }
+        </script>
+    </body>
+</html>
