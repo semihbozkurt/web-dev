@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>objects</title>
+    </head>
+    <body>
+        
+
+        <script>
+            var person={name:'semih', age:'16'}
+            document.write(person.name.toUpperCase(),"<br>")
+            document.write(Math.abs(10));document.write(' ');document.write(Math.abs(10),'<br>')
+            document.write(Math.sin(Math.PI/180*90)) //converting to radian
+
+            function f1(){ //arguments is a object, 0:first value written to the function
+                var sum=0
+                for(var i=0;i<arguments.length;i++){
+                    sum+=arguments[i]
+                }
+                return sum
+            }
+            var object=f1(1,2,3,4,5,10)
+            document.write('<br>',object)
+        </script>
+    </body>
+</html>
