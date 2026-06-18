@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dom Todo app</title>
+    </head>
+    <body>
+        <h1>Add todo</h1>
+        <input type="text" id="inn">
+        <button onclick="Add()">Add</button>
+        <div id="Liste"></div>
+
+        <script>
+            function Add(){
+                const activity = document.getElementById('inn').value;
+                var task = document.createElement('div')
+                task.innerHTML= activity
+                document.getElementById('Liste').appendChild(task);
+                task.onclick= ()=>{
+                    task.remove()
+                }
+            }
+        </script>
+    </body>
+</html>
