@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dates</title>
+
+    </head>
+    <body>
+        <script>
+            let x = new Date();
+            let x1 = x.getDay();
+            let dayName = null;
+
+            switch (x1){
+                case 0: dayName = 'sunday';
+                break;
+                case 1: dayName = 'monday';
+                break;
+                case 2: dayName = 'tue';
+                break;
+                case 3: dayName = 'wed';
+                break;
+                case 4: dayName = 'thur';
+                break;
+                case 5: dayName = 'fri';
+                break;
+                case 6: dayName = 'sat';
+                break;
+            }
+            document.write(dayName)
+        </script>
+    </body>
+</html>
