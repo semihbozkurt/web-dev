@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>class</title>
+    </head>
+    <body>
+        <script>
+            class Human{
+                constructor(name,Age,eye){
+                    this.name= name
+                    this.age= Age
+                    this.eyeColor= eye
+                }
+                walk(){
+                    document.write(this.name,' is walking <br>')
+                }
+                eat(){
+                    document.write(this.name,' is eating <br>')
+                }
+
+            }
+            var semih= new Human('Semih',16,'brown')
+            var Hüseyin= new Human('Hüseyin',16,'brown')
+            document.write(semih.name,'<br>')
+            semih.walk()
+            Hüseyin.eat()
+            document.write(Hüseyin.eyeColor,'<br>')
+
+
+        </script>
+    </body>
+</html>

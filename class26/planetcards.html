@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Planet cards</title>
+        <style>
+
+
+body {
+
+font-family: Arial;
+
+background: #f0f4ff;
+
+padding: 30px;
+
+text-align: center;
+
+}
+
+h1 { color: #ff5a43; }
+
+p { color: #555; }
+
+.cards {
+
+display: flex;
+
+justify-content: center;
+
+gap: 20px;
+
+margin-top: 25px;
+
+}
+
+.card {
+
+background: white;
+
+border: 3px solid #ff5a43;
+
+border-radius: 12px;
+
+padding: 20px;
+
+width: 200px;
+
+}
+
+.planet-name {
+
+font-size: 22px;
+
+font-weight: bold;
+
+color: #333;
+
+}
+
+.planet-fact { color: #666; margin-top: 10px; font-size: 14px; }
+
+button {
+
+background: #ff5a43;
+
+color: white;
+
+border: none;
+
+padding: 12px 28px;
+
+border-radius: 8px;
+
+cursor: pointer;
+
+font-size: 16px;
+
+margin-top: 10px;
+
+}
+
+
+        </style>
+    </head>
+    <body>
+        <h1>My Planet Cards</h1>
+
+<p>Use a JavaScript class to build planet cards!</p>
+
+<button onclick="showPlanets()">Show Planets!</button>
+
+<div class="cards">
+
+<div id="card1"></div>
+
+<div id="card2"></div>
+
+<div id="card3"></div>
+
+</div>
+
+
+
+<script>
+    var p1 = document.getElementById('card1')
+    var p2 = document.getElementById('card2')
+    var p3 = document.getElementById('card3')
+    class Planet{
+        constructor(Name,ff){
+            this.name=Name
+            this.facts=ff
+        }
+        tell(){
+            return (this.name +' '+this.facts)
+        }
+    }
+    var pla1= new Planet('Mars','is actually cold')
+    var pla2= new Planet('Saturn','has rings')
+    var pla3= new Planet('Earth','is where humans live')
+
+    function showPlanets(){
+        p1.innerHTML="<div class='card'><div class='planet-name'>" + pla1.name + "</div>" +
+
+"<div class='planet-fact'>" + pla1.tell() + "</div></div>";
+        p2.innerHTML="<div class='card'><div class='planet-name'>" + pla2.name + "</div>" +
+
+"<div class='planet-fact'>" + pla2.tell() + "</div></div>";
+        p3.innerHTML="<div class='card'><div class='planet-name'>" + pla3.name + "</div>" +
+
+"<div class='planet-fact'>" + pla3.tell() + "</div></div>";
+    }
+</script>
+    </body>
+</html>
