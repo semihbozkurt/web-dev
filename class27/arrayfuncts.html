@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>array functions</title>
+    </head>
+    <body>
+        <script>
+            var songs=['Bam','güm','çat','cikcik','taktuk']
+            document.write(songs,'<br>')
+            songs.sort() //sorts alphabeticly A to Z
+            document.write(songs,'<br>')
+            songs.reverse() //reverses the order
+            document.write(songs,'<br>')
+            var ls=[11,33,53,51,22,40,70,9]
+            document.write(ls,'<br>')
+            ls.sort() // sorts like folder name
+            document.write(ls,'<br>')
+            ls.sort((a,b)=>b-a) //check two and two, if b(second value) is bigger than a(first value), than it gives a positive respones so doesnt change the order. İf not, it gives negative value and changes the order.
+            document.write(ls,'<br>')
+
+            function square(n){
+                return n*n
+            }
+            for(var i=0;i<ls.length;i++){
+                document.write(square(ls[i]),"","<br>")
+            }
+
+            //samething:
+            document.write(ls.map((n)=>n*n))
+
+        </script>
+    </body>
+</html>
