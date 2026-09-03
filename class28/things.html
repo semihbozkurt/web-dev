@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            manys
+        </title>
+    </head>
+    <body>
+        <script>
+            var x = 10;
+            document.write(typeof x,'<br>')
+            document.write(typeof (String(x)),'<br>')
+            document.write(typeof (Boolean(x)),'<br>')
+            //             0123456789
+            var setning = 'There once was a ship that put to sea'
+            document.write(setning.search('ship'),'<br>')
+            document.write(setning.replace('once','ones:)'),'<br>')
+            try{
+                var a= 10
+                var b= 'hh'
+                if (isNaN(b)){throw error}
+                document.write(a/b)
+            }
+            catch{document.write('error occured')}
+        </script>
+    </body>
+</html>

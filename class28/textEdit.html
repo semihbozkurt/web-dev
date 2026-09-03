@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your tekst editor</title>
+        <style>
+            *{margin: 0;padding: 0;box-sizing: border-box;}
+            body{background-color: rgb(27, 26, 26);}
+            #heady{
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: black;
+                border-bottom: 2px solid magenta;
+            }
+
+            .rigt{display: flex; gap: 10px; align-items: center; padding-right: 10px;}
+            .rigt button{
+                height: 25px;
+                width: 60px;
+                background-color: green;
+                border: 1px solid orange;
+                border-radius: 15px;
+                transition: 0.1s ease;
+                display: flex; justify-content: center; align-items: center;
+            }
+            .rigt button:hover{
+                transform: scale(1.1);
+            }
+
+            .lef{padding-left: 10px;}
+            .lef p {margin: 0; color:red;}
+
+            .white{background-color: rgb(207, 207, 207) !important;}
+
+            #generalT{
+                width: 100%;
+                height: 90vh;
+                background-color: inherit;
+                color: darkblue;
+                position: fixed;
+                bottom: 0; left: 0;
+                resize: none;
+                outline: none;
+                border: none;
+            }
+            
+            #generalT::-webkit-scrollbar {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="heady">
+            <div class="lef"><p>Text Editorium</p></div>
+            <div class="rigt">
+                <button id="searchy" onclick="sercht()">Search</button>
+                <button id="replace" onclick="shift()">Replace</button>
+                <button id="mode" onclick="changemode()">M</button>
+
+            </div>
+        </header>
+        <textarea type="text" id="generalT" placeholder="Start typing when you want to.......... BE QUICK!!!"></textarea>
+
+        <script>
+            function changemode(){document.body.classList.toggle('white');document.getElementById('heady').classList.toggle('white')}
+
+            var writtetekte = document.getElementById('generalT').value
+
+            function sercht(){
+                var isToSearch = prompt('What to search for?')
+                var position = writtetekte.search(isToSearch)
+                document.getElementById('generelT')
+            }
+
+        </script>
+    </body>
+</html>
