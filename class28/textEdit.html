@@ -46,8 +46,10 @@
                 resize: none;
                 outline: none;
                 border: none;
+                padding-top: 15px;
+                padding-bottom: 25px;
             }
-            
+
             #generalT::-webkit-scrollbar {
                 display: none;
             }
@@ -63,17 +65,23 @@
 
             </div>
         </header>
-        <textarea type="text" id="generalT" placeholder="Start typing when you want to.......... BE QUICK!!!"></textarea>
+        <textarea spellcheck="false" type="text" id="generalT" placeholder="Start typing when you want to.......... BE QUICK!!!"></textarea>
 
         <script>
             function changemode(){document.body.classList.toggle('white');document.getElementById('heady').classList.toggle('white')}
 
-            var writtetekte = document.getElementById('generalT').value
-
+            var Sposition= 0
             function sercht(){
-                var isToSearch = prompt('What to search for?')
-                var position = writtetekte.search(isToSearch)
-                document.getElementById('generelT')
+                var writtetekte = document.getElementById('generalT').value
+                var isToSearch = prompt('What to search for?');
+                var position = writtetekte.indexOf(isToSearch,Sposition);
+
+                if (position === -1){alert('No result')};
+                var alan = document.getElementById('generalT');
+                alan.focus();
+                alan.setSelectionRange(position, position+isToSearch.length)
+                
+                Sposition= position + isToSearch.length
             }
 
         </script>
