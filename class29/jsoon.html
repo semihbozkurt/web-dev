@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>JSON</title>
+        <style>
+            body{background-color: orange; box-sizing: border-box; display: flex; justify-content: center; align-items: center;}
+            .abd{
+                height: 90px; width: 190px;
+                display: flex;
+                flex-direction: column;
+                background-color: yellow;
+                justify-content: space-between;
+                padding: 7px;
+            }
+            .abd input{height: 30px; width: 170px;}
+            .abd button:hover{
+                transform: scale(1.03);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="abd">
+        <input id="name" placeholder="Writey namey">
+        <input type="number" id="numm" placeholder="write a number which is equal to your password">
+        <button onclick="getdata()">LOGİN</button>
+        </div>
+
+        <script>
+            function getdata(){
+                var name= document.getElementById('name').value
+                var pass = document.getElementById('numm').value
+                var datago ={
+                    name: name,
+                    password: pass
+                }
+                document.write(datago,'<br>')
+                document.write(JSON.stringify(datago),'<br>')
+        
+        
+                // we fetch the information from backend and its something like this:
+                var datacome ='{"acount_number": 175017590,"Balance": 100.000,"type":"dollar"}'
+            document.write(datacome,'<br>')
+            //we use object form in JS
+            document.write(JSON.parse(datacome))
+
+            }
+
+            setTimeout(()=>document.write('Took U waaay too much time'),60000)
+        </script>
+    </body>
+</html>
