@@ -44,7 +44,7 @@
 
             }
 
-            setTimeout(()=>document.write('Took U waaay too much time'),60000)
+            setTimeout(function(){if (document.getElementById('name').value===''){document.write('Took U waaay too much time')}},3000)
         </script>
     </body>
 </html>
