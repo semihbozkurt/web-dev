@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Tiemout</title>
+    </head>
+    <body>
+        
+
+        <script>
+            document.write('hello world<br>')
+             document.write('hello world<br>')
+              document.write('hello world<br>')
+            setTimeout(()=>{document.write('bye')}
+        ,5000)
+            
+              document.write('hello world<br>')
+              document.write('hello world<br>')
+              document.write('hello world<br>')
+              document.write('hello world<br>')
+              document.write('hello world<br>')
+              document.write('hello world<br>')
+        </script>
+        <script>
+            let weatherdata = new Promise((resolve, reject)=>{
+                setTimeout(()=>{resolve('data is served')},5000)
+            })
+        </script>
+    </body>
+</html>
