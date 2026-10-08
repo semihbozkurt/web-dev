@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      
+      <script>
+
+        function fetchWeather(){
+          //code for api call will be written here
+          return false
+        }
+        
+        setTimeout(()=>{
+          document.write("hello<br>");
+        },7000) //it creates a THREAD/background process that
+        //will wait in the background for some times
+
+        //Promise is a class, already built by js people
+        //we are creating one object of the class Promise
+        var promiseOb = new Promise(function(resolve,reject){
+          //you make a request to the database/api/any server
+          //server may take some time to process: that state is called pending state
+          //server may eventually give you response: successful/resolved
+          //server may reject your request:rejcted
+
+          //assume that api has responded susscessfully
+          //resolve("successful")
+          //if server has rejected the req: that will be handled by reject(err)
+          //reject("rejected")
+          setTimeout(()=>{
+             var requestToAPI = fetchWeather()
+          if (requestToAPI==true){
+            resolve("successful")
+          }else{
+            reject("unsuccessful, rejected")
+          }
+        
+          },10000)
+         
+})
+
+        promiseOb
+        .then((message)=>{
+          document.write(message)
+        })
+        .catch((message)=>{
+          document.write(message)
+
+        })
+      </script>
+  </body>
+</html>
