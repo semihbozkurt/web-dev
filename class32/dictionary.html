@@ -78,7 +78,7 @@
 
         <div id="searcherCont">
         <div id="searcher">
-            <div style="height: 20vh; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="height: 20vh; display: flex; flex-direction: column; justify-content: space-between;overflow-y: scroll;">
                 <div style="display: flex; gap: 10px;">
                     <div style="padding:5px;font-weight:bold;color: green;display:flex;align-items:center;">Dictionary!</div>
                     <input type="text" id="searchWord" placeholder="Just search for!!!">
@@ -86,7 +86,7 @@
                 <div style="display: flex; justify-content: space-evenly;">
                     <button onclick="searchWord()" class="btn btn-danger">Search</button>
                 </div>
-                <div><span id="result"></span></div>
+                <div><span id="result" style="overflow-y: scroll;"></span></div>
             </div>
         </div>
         </div>
@@ -118,12 +118,12 @@
                 //axios, fetch
                try{
 
-                var response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
+                var response = await fetch(`https://freedictionaryapi.com/api/v1/entries/en/${word}`)
                 if(!response.ok){
                   throw new Error("word was not found")
                 }
-                var data = await response.JSON.parse()
-                document.write(response)
+                var data = await response.json()
+                resultArea.innerText = JSON.stringify(data)
 
                }catch(error){
                 console.log(error)
