@@ -1,44 +1,64 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+        </style>
     </head>
     <body>
         <div id="container">
             <div id="calculator">
-                <div id="output">
+                <div id="outputs">
                     <div id="history"></div>
-                    <div id="history-box"></div>
-                    <input type="text" id="input">
+                    <input style="display: flex; align-content: right;" type="text" id="output">
                 </div>
                 <div id="buttons">
-                    <div class="operators" id="C">C</div>
-                    <div class="operators" id="CE">CE</div>
-                    <div class="operators" id="%">%</div>
-                    <div class="operators" id="/">/</div>
+                    <button onclick="operate()" class="operators" id="C">C</button>
+                    <button onclick="operate()" class="operators" id="CE">CE</button>
+                    <button onclick="operate()" class="operators" id="%">%</button>
+                    <button onclick="operate()" class="operators" id="/">/</button>
 
-                    <div class="numbers" id="7">7</div>
-                    <div class="numbers" id="8">8</div>
-                    <div class="numbers" id="9">9</div>
-                    <div class="operators" id="*">*</div>
+                    <button onclick="write()" class="numbers" id="7">7</button>
+                    <button onclick="write()" class="numbers" id="8">8</button>
+                    <button onclick="write()" class="numbers" id="9">9</button>
+                    <button onclick="operate()" class="operators" id="*">*</button>
 
-                    <div class="numbers" id="4">4</div>
-                    <div class="numbers" id="5">5</div>
-                    <div class="numbers" id="6">6</div>
-                    <div class="operators" id="+">+</div>
+                    <button onclick="write()" class="numbers" id="4">4</button>
+                    <button onclick="write()" class="numbers" id="5">5</button>
+                    <button onclick="write()" class="numbers" id="6">6</button>
+                    <button onclick="operate()" class="operators" id="+">+</button>
 
-                    <div class="numbers" id="1">1</div>
-                    <div class="numbers" id="2">2</div>
-                    <div class="numbers" id="3">3</div>
-                    <div class="operators" id="-">-</div>
+                    <button onclick="write()" class="numbers" id="1">1</button>
+                    <button onclick="write()" class="numbers" id="2">2</button>
+                    <button onclick="write()" class="numbers" id="3">3</button>
+                    <button onclick="operate()" class="operators" id="-">-</button>
 
-                    <div class="numbers" id="00">00</div>
-                    <div class="numbers" id="0">0</div>
-                    <div class="operators" id=".">.</div>
-                    <div class="operators" id="=">=</div>
+                    <button onclick="write()" class="numbers" id="00">00</button>
+                    <button onclick="write()" class="numbers" id="0">0</button>
+                    <button onclick="operate()" class="operators" id=".">.</button>
+                    <button onclick="operate()" class="operators" id="=">=</button>
 
                 </div>
                 <div></div>
             </div>
         </div>
     </body>
+
+    <script>
+        var history = document.getElementById('history')
+        var output = document.getElementById('output')
+        function write(){
+            output.value+= this.value
+        }
+        function operate(){
+            var outputVal= output.value
+            history.innerText= outputVal+'+'
+            outputVal = ''
+        }
+        function calc(){
+            var tekst = history.innerText + output.value
+            output.value=tekst.eval()
+        }
+        
+    </script>
 </html>
